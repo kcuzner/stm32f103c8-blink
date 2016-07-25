@@ -32,9 +32,7 @@ LDFLAGS += -T$(LSCRIPT) -mthumb -mcpu=$(CPU) --specs=nosys.specs
 ASFLAGS += -mcpu=$(CPU)
 
 # Flashing
-OCDFLAGS = -f /usr/share/openocd/scripts/interface/stlink-v2.cfg \
-		   -f /usr/share/openocd/scripts/target/stm32f1x.cfg \
-		   -f openocd.cfg
+OCDFLAGS = -f openocd.cfg
 
 # Tools
 CC = arm-none-eabi-gcc
